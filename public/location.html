@@ -1,90 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Place Autocomplete Address Form</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/forms.css">
-  </head>
 
-  <body>
-      <main class="container"> 
-        <center>
-        <div class="row">
-            <img class="responsive-img" id="logo" src="./img/school_pool_logo.png" />
-            <h5 class="pleaseLogIn">Enter a new address</h5>
-            
-        </div>    
-            
-        <div class="row">
-            <div class="col s12">
-              <div class="row" id="locationField">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix"></i>
-                  <input id="autocomplete" placeholder="Start typing your address" onFocus="geolocate()" type="text" class="acformfields"/>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        
+<head>
+  <title>Place Autocomplete Address Form</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
 
-    <!-- Note: The address components in this sample are typical. You might need to adjust them for
-               the locations relevant to your app. For more information, see
-         https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-    -->
-    <div class="row">
+<body>
+  <div class="row">
+    <div class="col s12 center">
+      <img class="responsive-img" id="logo"
+          src="./img/school_pool_logo_white.png" />
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <main class="container">
+    <center>
+      <div class="row">
+        <h5 class="pleaseLogIn">Enter a new address</h5>
+      </div>
+
+      <div class="row">
         <div class="col s12">
-          <div class="row form" id="addressData">
+          <div class="row" id="locationField">
             <div class="input-field col s12">
-              
-                <table id="address">
-                    <tr class="noborder">
-                      <td class="label">Street address</td>
-                      <td class="slimField"><input class="field" id="street_number" disabled="true"/></td>
-                      <td class="wideField" colspan="3"><input class="field" id="route" disabled="true"/></td>
-                    </tr>
-                    <tr class="noborder">
-                      <td class="label">City</td>
-                      <td class="wideField" colspan="3"><input class="field" id="locality" disabled="true"/></td>
-                    </tr>
-                    <tr class="noborder">
-                      <td class="label">State</td>
-                      <td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true"/></td>
-                      <td class="label">Postcode</td>
-                      <td class="wideField"><input class="field" id="postal_code" disabled="true"/></td>
-                    </tr>
-                    <tr class="noborder">
-                      <td class="label">Country</td>
-                      <td class="wideField" colspan="3"><input class="field" id="country" disabled="true"/></td>
-                    </tr>
-                    <tr class="noborder">
-                        <td class="label">Lat/long</td>
-                        <td class="wideField" colspan="3"><input class="field" id="latlong" disabled="true"/></td>
-                    </tr>
-                    <tr class="noborder">
-                        <td class="label">Name</td>
-                        <td class="wideField" colspan="3"><input class="field" id="name" placeholder="Enter a short reference name"/></td>
-                    </tr>
-                  </table>
-                  <center>
-                    <div class='row'>
-                        <button type='submit' name='signupFrmBtn' class='col s12 btn btn-large waves-effect indigo' id='signupFrmBtn'>Submit</button>
-                    </div>
-                </center>
+              <i class="material-icons prefix"></i>
+              <input id="autocomplete" placeholder="Start typing your address" onFocus="geolocate()" type="text"
+                class="acformfields" />
+
             </div>
           </div>
         </div>
       </div>
-    
-    </main>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-    <script src="js/location.js" ></script>
-    <script src="js/autocomplete.js" ></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaNCv59UWkQGavv9Z8QEh8NuVfdhGOzcg&libraries=places&callback=initAutocomplete" ></script>
-    
+
+
+      <!-- Note: The address components in this sample are typical. You might need to adjust them for
+               the locations relevant to your app. For more information, see
+         https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+    -->
+      <div class="row">
+        <div class="col s12">
+          <div class="row form" id="addressData">
+            <div class="input-field col s12">
+
+              <table id="address">
+                <tr class="noborder">
+                  <td class="label">Street Address</td>
+                  <td class="slimField"><input class="field" id="street_number" disabled="true" /></td>
+                  <td class="wideField" colspan="3"><input class="field" id="route" disabled="true" /></td>
+                </tr>
+                <tr class="noborder">
+                  <td class="label">City</td>
+                  <td class="wideField" colspan="3"><input class="field" id="locality" disabled="true" /></td>
+                </tr>
+                <tr class="noborder">
+                  <td class="label">State</td>
+                  <td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true" /></td>
+                  <td class="label">Postcode</td>
+                  <td class="wideField"><input class="field" id="postal_code" disabled="true" /></td>
+                </tr>
+                <tr class="noborder">
+                  <td class="label">Country</td>
+                  <td class="wideField" colspan="3"><input class="field" id="country" disabled="true" /></td>
+                </tr>
+                <tr class="noborder">
+                  <td class="label">Lat/long</td>
+                  <td class="wideField" colspan="3"><input class="field" id="latlong" disabled="true" /></td>
+                </tr>
+                <tr class="noborder">
+                  <td class="label">Name</td>
+                  <td class="wideField" colspan="3"><input class="field" id="name"
+                      placeholder="Enter a short reference name" /></td>
+                </tr>
+              </table>
+              <center>
+                <br>
+                <div class='row'>
+                  <button type='submit' name='signupFrmBtn' class='col s12 btn btn-large waves-effect indigo'
+                    id='signupFrmBtn'>Submit</button>
+                </div>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">
+        <div class="col s12 m6 l6">
+          <h6 class="white-text">School Pool Perth - Copyright 2020 © </h6>
+        </div>
+      </footer>
+
+  </main>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script src="js/location.js"></script>
+  <script src="js/autocomplete.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaNCv59UWkQGavv9Z8QEh8NuVfdhGOzcg&libraries=places&callback=initAutocomplete"></script>
+
 </body>
+
 </html>
